@@ -22,9 +22,17 @@ draco-bench/
 # in src/hyperresearch/skills/ (skills) and src/hyperresearch/core/hooks.py
 # (agent templates).
 .claude/
-CLAUDE.md
 AGENTS.md
 GEMINI.md
+
+# CLAUDE.md is TRACKED in this repo — it is the hand-written contributor guide
+# for AI assistants working on hyperresearch itself, not install output.
+# Caveat: running `hyperresearch install .` / `hyperresearch init .` inside a
+# checkout makes inject_agent_docs() append its
+# <!-- hyperresearch:start --> ... <!-- hyperresearch:end --> block (with your
+# absolute binary path) below the tracked content. Never commit that block —
+# `git checkout -- CLAUDE.md` to drop it, or smoke-test installs against a
+# scratch directory instead of the checkout.
 
 # Per-vault research output
 research/
